@@ -1,0 +1,253 @@
+Starting Nmap 7.92 ( https://nmap.org ) at 2022-03-09 16:26 IST
+Nmap scan report for google.com (142.250.76.206)
+Host is up (0.013s latency).
+Other addresses for google.com (not scanned): 2404:6800:4009:80e::200e
+rDNS record for 142.250.76.206: bom12s10-in-f14.1e100.net
+Not shown: 994 filtered tcp ports (no-response)
+PORT     STATE  SERVICE  VERSION
+21/tcp   open   ftp?
+25/tcp   open   smtp?
+|_ssl-date: TLS randomness does not represent time
+| fingerprint-strings: 
+|   GenericLines: 
+|     220 Sophos ESMTP ready
+|     unrecognized command
+|     unrecognized command
+|   Hello: 
+|     220 Sophos ESMTP ready
+|     Syntactically invalid EHLO argument(s)
+|   Help: 
+|     220 Sophos ESMTP ready
+|     214-Commands supported:
+|     AUTH STARTTLS HELO EHLO MAIL RCPT DATA BDAT NOOP QUIT RSET HELP
+|   NULL: 
+|_    220 Sophos ESMTP ready
+| smtp-commands: Sophos Hello google.com [192.168.5.29], SIZE, 8BITMIME, PIPELINING, PIPE_CONNECT, STARTTLS, HELP
+|_ Commands supported: AUTH STARTTLS HELO EHLO MAIL RCPT DATA BDAT NOOP QUIT RSET HELP
+80/tcp   open   http     gws
+| fingerprint-strings: 
+|   FourOhFourRequest: 
+|     HTTP/1.0 404 Not Found
+|     Content-Type: text/html; charset=UTF-8
+|     Referrer-Policy: no-referrer
+|     Content-Length: 1592
+|     Date: Wed, 09 Mar 2022 05:26:33 GMT
+|     Accept-Ranges: none
+|     Via: HTTP/1.1 forward.http.proxy:3128
+|     Connection: close
+|     <!DOCTYPE html>
+|     <html lang=en>
+|     <meta charset=utf-8>
+|     <meta name=viewport content="initial-scale=1, minimum-scale=1, width=device-width">
+|     <title>Error 404 (Not Found)!!1</title>
+|     <style>
+|     *{margin:0;padding:0}html,code{font:15px/22px arial,sans-serif}html{background:#fff;color:#222;padding:15px}body{margin:7% auto 0;max-width:390px;min-height:180px;padding:30px 0 15px}* > body{background:url(//www.google.com/images/errors/robot.png) 100% 5px no-repeat;padding-right:205px}p{margin:11px 0 22px;overflow:hidden}ins{color:#777;text-decoration:none}a img{border:0}@media screen and (max-width:772px){body{background:none;margin-top:0;max-width:none;padding-r
+|   GetRequest: 
+|     HTTP/1.1 500 Software caused connection abort
+|     Date: Wed, 09 Mar 2022 05:26:31 GMT
+|     Cache-Control: no-cache
+|     Pragma: no-cache
+|     Content-Type: text/html; charset="UTF-8"
+|     Content-Length: 0
+|     Via: HTTP/1.1 forward.http.proxy:3128
+|     Connection: close
+|   HTTPOptions: 
+|     HTTP/1.0 405 Method Not Allowed
+|     Allow: GET, HEAD
+|     Date: Wed, 09 Mar 2022 05:26:32 GMT
+|     Content-Type: text/html; charset=UTF-8
+|     Server: gws
+|     Content-Length: 1592
+|     X-XSS-Protection: 0
+|     X-Frame-Options: SAMEORIGIN
+|     Accept-Ranges: none
+|     Via: HTTP/1.1 forward.http.proxy:3128
+|     Connection: close
+|     <!DOCTYPE html>
+|     <html lang=en>
+|     <meta charset=utf-8>
+|     <meta name=viewport content="initial-scale=1, minimum-scale=1, width=device-width">
+|     <title>Error 405 (Method Not Allowed)!!1</title>
+|     <style>
+|_    *{margin:0;padding:0}html,code{font:15px/22px arial,sans-serif}html{background:#fff;color:#222;padding:15px}body{margin:7% auto 0;max-width:390px;min-height:180px;padding:30px 0 15px}* > body{background:url(//www.google.com/images/errors/robot.png) 100% 5px no-repeat;padding-right:205px}p{margin:11px 0 22px;overflow:hidden}ins{color:#777;text-decoration:none}a img{border:0}@media screen and (max-wi
+|_http-server-header: gws
+143/tcp  open   imap?
+|_imap-ntlm-info: ERROR: Script execution failed (use -d to debug)
+|_sslv2: ERROR: Script execution failed (use -d to debug)
+|_tls-alpn: ERROR: Script execution failed (use -d to debug)
+|_ssl-date: ERROR: Script execution failed (use -d to debug)
+|_tls-nextprotoneg: ERROR: Script execution failed (use -d to debug)
+|_ssl-cert: ERROR: Script execution failed (use -d to debug)
+465/tcp  closed smtps
+6346/tcp closed gnutella
+2 services unrecognized despite returning data. If you know the service/version, please submit the following fingerprints at https://nmap.org/cgi-bin/submit.cgi?new-service :
+==============NEXT SERVICE FINGERPRINT (SUBMIT INDIVIDUALLY)==============
+SF-Port25-TCP:V=7.92%I=7%D=3/9%Time=622887FA%P=x86_64-pc-linux-gnu%r(NULL,
+SF:18,"220\x20Sophos\x20ESMTP\x20ready\r\n")%r(Hello,44,"220\x20Sophos\x20
+SF:ESMTP\x20ready\r\n501\x20Syntactically\x20invalid\x20EHLO\x20argument\(
+SF:s\)\r\n")%r(Help,76,"220\x20Sophos\x20ESMTP\x20ready\r\n214-Commands\x2
+SF:0supported:\r\n214\x20AUTH\x20STARTTLS\x20HELO\x20EHLO\x20MAIL\x20RCPT\
+SF:x20DATA\x20BDAT\x20NOOP\x20QUIT\x20RSET\x20HELP\r\n")%r(GenericLines,4C
+SF:,"220\x20Sophos\x20ESMTP\x20ready\r\n500\x20unrecognized\x20command\r\n
+SF:500\x20unrecognized\x20command\r\n");
+==============NEXT SERVICE FINGERPRINT (SUBMIT INDIVIDUALLY)==============
+SF-Port80-TCP:V=7.92%I=7%D=3/9%Time=622887FD%P=x86_64-pc-linux-gnu%r(GetRe
+SF:quest,F8,"HTTP/1\.1\x20500\x20Software\x20caused\x20connection\x20abort
+SF:\r\nDate:\x20Wed,\x2009\x20Mar\x202022\x2005:26:31\x20GMT\r\nCache-Cont
+SF:rol:\x20no-cache\r\nPragma:\x20no-cache\r\nContent-Type:\x20text/html;\
+SF:x20charset=\"UTF-8\"\r\nContent-Length:\x200\r\nVia:\x20HTTP/1\.1\x20fo
+SF:rward\.http\.proxy:3128\r\nConnection:\x20close\r\n\r\n")%r(HTTPOptions
+SF:,75E,"HTTP/1\.0\x20405\x20Method\x20Not\x20Allowed\r\nAllow:\x20GET,\x2
+SF:0HEAD\r\nDate:\x20Wed,\x2009\x20Mar\x202022\x2005:26:32\x20GMT\r\nConte
+SF:nt-Type:\x20text/html;\x20charset=UTF-8\r\nServer:\x20gws\r\nContent-Le
+SF:ngth:\x201592\r\nX-XSS-Protection:\x200\r\nX-Frame-Options:\x20SAMEORIG
+SF:IN\r\nAccept-Ranges:\x20none\r\nVia:\x20HTTP/1\.1\x20forward\.http\.pro
+SF:xy:3128\r\nConnection:\x20close\r\n\r\n<!DOCTYPE\x20html>\n<html\x20lan
+SF:g=en>\n\x20\x20<meta\x20charset=utf-8>\n\x20\x20<meta\x20name=viewport\
+SF:x20content=\"initial-scale=1,\x20minimum-scale=1,\x20width=device-width
+SF:\">\n\x20\x20<title>Error\x20405\x20\(Method\x20Not\x20Allowed\)!!1</ti
+SF:tle>\n\x20\x20<style>\n\x20\x20\x20\x20\*{margin:0;padding:0}html,code{
+SF:font:15px/22px\x20arial,sans-serif}html{background:#fff;color:#222;padd
+SF:ing:15px}body{margin:7%\x20auto\x200;max-width:390px;min-height:180px;p
+SF:adding:30px\x200\x2015px}\*\x20>\x20body{background:url\(//www\.google\
+SF:.com/images/errors/robot\.png\)\x20100%\x205px\x20no-repeat;padding-rig
+SF:ht:205px}p{margin:11px\x200\x2022px;overflow:hidden}ins{color:#777;text
+SF:-decoration:none}a\x20img{border:0}@media\x20screen\x20and\x20\(max-wi"
+SF:)%r(FourOhFourRequest,722,"HTTP/1\.0\x20404\x20Not\x20Found\r\nContent-
+SF:Type:\x20text/html;\x20charset=UTF-8\r\nReferrer-Policy:\x20no-referrer
+SF:\r\nContent-Length:\x201592\r\nDate:\x20Wed,\x2009\x20Mar\x202022\x2005
+SF::26:33\x20GMT\r\nAccept-Ranges:\x20none\r\nVia:\x20HTTP/1\.1\x20forward
+SF:\.http\.proxy:3128\r\nConnection:\x20close\r\n\r\n<!DOCTYPE\x20html>\n<
+SF:html\x20lang=en>\n\x20\x20<meta\x20charset=utf-8>\n\x20\x20<meta\x20nam
+SF:e=viewport\x20content=\"initial-scale=1,\x20minimum-scale=1,\x20width=d
+SF:evice-width\">\n\x20\x20<title>Error\x20404\x20\(Not\x20Found\)!!1</tit
+SF:le>\n\x20\x20<style>\n\x20\x20\x20\x20\*{margin:0;padding:0}html,code{f
+SF:ont:15px/22px\x20arial,sans-serif}html{background:#fff;color:#222;paddi
+SF:ng:15px}body{margin:7%\x20auto\x200;max-width:390px;min-height:180px;pa
+SF:dding:30px\x200\x2015px}\*\x20>\x20body{background:url\(//www\.google\.
+SF:com/images/errors/robot\.png\)\x20100%\x205px\x20no-repeat;padding-righ
+SF:t:205px}p{margin:11px\x200\x2022px;overflow:hidden}ins{color:#777;text-
+SF:decoration:none}a\x20img{border:0}@media\x20screen\x20and\x20\(max-widt
+SF:h:772px\){body{background:none;margin-top:0;max-width:none;padding-r");
+Device type: firewall
+Running (JUST GUESSING): Fortinet embedded (87%)
+OS CPE: cpe:/h:fortinet:fortigate_100d
+Aggressive OS guesses: Fortinet FortiGate 100D firewall (87%)
+No exact OS matches for host (test conditions non-ideal).
+
+TRACEROUTE (using port 6346/tcp)
+HOP RTT    ADDRESS
+1   ... 30
+
+OS and Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+Nmap done: 1 IP address (1 host up) scanned in 178.88 seconds
+Starting Nmap 7.92 ( https://nmap.org ) at 2022-03-09 17:28 IST
+Stats: 0:00:01 elapsed; 0 hosts completed (0 up), 0 undergoing Script Pre-Scan
+NSE Timing: About 0.00% done
+Nmap scan report for google.com (172.217.166.46)
+Host is up (0.16s latency).
+Other addresses for google.com (not scanned): 2404:6800:4009:81f::200e
+rDNS record for 172.217.166.46: bom07s18-in-f14.1e100.net
+Not shown: 996 filtered tcp ports (no-response)
+PORT    STATE  SERVICE     VERSION
+80/tcp  open   tcpwrapped
+|_http-server-header: gws
+|_http-title: Did not follow redirect to http://www.google.com/
+135/tcp closed msrpc
+139/tcp closed netbios-ssn
+443/tcp open   ssl/https   gws
+| tls-alpn: 
+|   grpc-exp
+|   h2
+|_  http/1.1
+| fingerprint-strings: 
+|   GetRequest: 
+|     HTTP/1.0 200 OK
+|     Date: Wed, 09 Mar 2022 06:28:27 GMT
+|     Expires: -1
+|     Cache-Control: private, max-age=0
+|     Content-Type: text/html; charset=ISO-8859-1
+|     P3P: CP="This is not a P3P policy! See g.co/p3phelp for more info."
+|     Server: gws
+|     X-XSS-Protection: 0
+|     X-Frame-Options: SAMEORIGIN
+|     Set-Cookie: 1P_JAR=2022-03-09-06; expires=Fri, 08-Apr-2022 06:28:27 GMT; path=/; domain=.google.com; Secure
+|     Set-Cookie: NID=511=ex1iQVkeivWJXFilRqC5O1bhKNDX3mfaXA9WxlFY_coT0acuexqjzaW_HU_atckgzIzUlceaTuukEIzo6mHjDLKEFCizU5j3LwIi09SxwMLJ-zNRZ316kGsaJIP2117-gUpgn_U1LbPt9vpwDRV3MFhZTazypPj0T9kv_WzyjU4; expires=Thu, 08-Sep-2022 06:28:27 GMT; path=/; domain=.google.com; HttpOnly
+|     Alt-Svc: h3=":443"; ma=2592000,h3-29=":443"; ma=2592000,h3-Q050=":443"; ma=2592000,h3-Q046=":443"; ma=2592000,h3-Q043=":443"; ma=2592000,quic=":443"; ma=2592000; v="46,43"
+|     Accept-Ranges: none
+|     Vary: Accept-Encoding
+|     <!doctype html><html it
+|   HTTPOptions: 
+|     HTTP/1.0 405 Method Not Allowed
+|     Allow: GET, HEAD
+|     Date: Wed, 09 Mar 2022 06:28:29 GMT
+|     Content-Type: text/html; charset=UTF-8
+|     Server: gws
+|     Content-Length: 1592
+|     X-XSS-Protection: 0
+|     X-Frame-Options: SAMEORIGIN
+|     Alt-Svc: h3=":443"; ma=2592000,h3-29=":443"; ma=2592000,h3-Q050=":443"; ma=2592000,h3-Q046=":443"; ma=2592000,h3-Q043=":443"; ma=2592000,quic=":443"; ma=2592000; v="46,43"
+|     <!DOCTYPE html>
+|     <html lang=en>
+|     <meta charset=utf-8>
+|     <meta name=viewport content="initial-scale=1, minimum-scale=1, width=device-width">
+|     <title>Error 405 (Method Not Allowed)!!1</title>
+|     <style>
+|_    *{margin:0;padding:0}html,code{font:15px/22px arial,sans-serif}html{background:#fff;color:#222;padding:15px}body{margin:7% auto 0;max-width:390px;min-height:180px;padding:30px 0 15px}* > body{background:url(//www.google.com/images/errors/robot.png) 100% 5px no-repeat;padding-right:205px}p{margin:11px 0 22p
+| tls-nextprotoneg: 
+|   grpc-exp
+|   h2
+|_  http/1.1
+|_http-server-header: gws
+| ssl-cert: Subject: commonName=*.google.com
+| Subject Alternative Name: DNS:*.google.com, DNS:*.appengine.google.com, DNS:*.bdn.dev, DNS:*.cloud.google.com, DNS:*.crowdsource.google.com, DNS:*.datacompute.google.com, DNS:*.google.ca, DNS:*.google.cl, DNS:*.google.co.in, DNS:*.google.co.jp, DNS:*.google.co.uk, DNS:*.google.com.ar, DNS:*.google.com.au, DNS:*.google.com.br, DNS:*.google.com.co, DNS:*.google.com.mx, DNS:*.google.com.tr, DNS:*.google.com.vn, DNS:*.google.de, DNS:*.google.es, DNS:*.google.fr, DNS:*.google.hu, DNS:*.google.it, DNS:*.google.nl, DNS:*.google.pl, DNS:*.google.pt, DNS:*.googleadapis.com, DNS:*.googleapis.cn, DNS:*.googlevideo.com, DNS:*.gstatic.cn, DNS:*.gstatic-cn.com, DNS:googlecnapps.cn, DNS:*.googlecnapps.cn, DNS:googleapps-cn.com, DNS:*.googleapps-cn.com, DNS:gkecnapps.cn, DNS:*.gkecnapps.cn, DNS:googledownloads.cn, DNS:*.googledownloads.cn, DNS:recaptcha.net.cn, DNS:*.recaptcha.net.cn, DNS:recaptcha-cn.net, DNS:*.recaptcha-cn.net, DNS:widevine.cn, DNS:*.widevine.cn, DNS:ampproject.org.cn, DNS:*.ampproject.org.cn, DNS:ampproject.net.cn, DNS:*.ampproject.net.cn, DNS:google-analytics-cn.com, DNS:*.google-analytics-cn.com, DNS:googleadservices-cn.com, DNS:*.googleadservices-cn.com, DNS:googlevads-cn.com, DNS:*.googlevads-cn.com, DNS:googleapis-cn.com, DNS:*.googleapis-cn.com, DNS:googleoptimize-cn.com, DNS:*.googleoptimize-cn.com, DNS:doubleclick-cn.net, DNS:*.doubleclick-cn.net, DNS:*.fls.doubleclick-cn.net, DNS:*.g.doubleclick-cn.net, DNS:doubleclick.cn, DNS:*.doubleclick.cn, DNS:*.fls.doubleclick.cn, DNS:*.g.doubleclick.cn, DNS:dartsearch-cn.net, DNS:*.dartsearch-cn.net, DNS:googletraveladservices-cn.com, DNS:*.googletraveladservices-cn.com, DNS:googletagservices-cn.com, DNS:*.googletagservices-cn.com, DNS:googletagmanager-cn.com, DNS:*.googletagmanager-cn.com, DNS:googlesyndication-cn.com, DNS:*.googlesyndication-cn.com, DNS:*.safeframe.googlesyndication-cn.com, DNS:app-measurement-cn.com, DNS:*.app-measurement-cn.com, DNS:gvt1-cn.com, DNS:*.gvt1-cn.com, DNS:gvt2-cn.com, DNS:*.gvt2-cn.com, DNS:2mdn-cn.net, DNS:*.2mdn-cn.net, DNS:googleflights-cn.net, DNS:*.googleflights-cn.net, DNS:admob-cn.com, DNS:*.admob-cn.com, DNS:*.gstatic.com, DNS:*.metric.gstatic.com, DNS:*.gvt1.com, DNS:*.gcpcdn.gvt1.com, DNS:*.gvt2.com, DNS:*.gcp.gvt2.com, DNS:*.url.google.com, DNS:*.youtube-nocookie.com, DNS:*.ytimg.com, DNS:android.com, DNS:*.android.com, DNS:*.flash.android.com, DNS:g.cn, DNS:*.g.cn, DNS:g.co, DNS:*.g.co, DNS:goo.gl, DNS:www.goo.gl, DNS:google-analytics.com, DNS:*.google-analytics.com, DNS:google.com, DNS:googlecommerce.com, DNS:*.googlecommerce.com, DNS:ggpht.cn, DNS:*.ggpht.cn, DNS:urchin.com, DNS:*.urchin.com, DNS:youtu.be, DNS:youtube.com, DNS:*.youtube.com, DNS:youtubeeducation.com, DNS:*.youtubeeducation.com, DNS:youtubekids.com, DNS:*.youtubekids.com, DNS:yt.be, DNS:*.yt.be, DNS:android.clients.google.com, DNS:developer.android.google.cn, DNS:developers.android.google.cn, DNS:source.android.google.cn
+| Not valid before: 2022-02-17T10:22:00
+|_Not valid after:  2022-05-12T10:21:59
+1 service unrecognized despite returning data. If you know the service/version, please submit the following fingerprint at https://nmap.org/cgi-bin/submit.cgi?new-service :
+SF-Port443-TCP:V=7.92%T=SSL%I=7%D=3/9%Time=62289682%P=x86_64-pc-linux-gnu%
+SF:r(GetRequest,75E4,"HTTP/1\.0\x20200\x20OK\r\nDate:\x20Wed,\x2009\x20Mar
+SF:\x202022\x2006:28:27\x20GMT\r\nExpires:\x20-1\r\nCache-Control:\x20priv
+SF:ate,\x20max-age=0\r\nContent-Type:\x20text/html;\x20charset=ISO-8859-1\
+SF:r\nP3P:\x20CP=\"This\x20is\x20not\x20a\x20P3P\x20policy!\x20See\x20g\.c
+SF:o/p3phelp\x20for\x20more\x20info\.\"\r\nServer:\x20gws\r\nX-XSS-Protect
+SF:ion:\x200\r\nX-Frame-Options:\x20SAMEORIGIN\r\nSet-Cookie:\x201P_JAR=20
+SF:22-03-09-06;\x20expires=Fri,\x2008-Apr-2022\x2006:28:27\x20GMT;\x20path
+SF:=/;\x20domain=\.google\.com;\x20Secure\r\nSet-Cookie:\x20NID=511=ex1iQV
+SF:keivWJXFilRqC5O1bhKNDX3mfaXA9WxlFY_coT0acuexqjzaW_HU_atckgzIzUlceaTuukE
+SF:Izo6mHjDLKEFCizU5j3LwIi09SxwMLJ-zNRZ316kGsaJIP2117-gUpgn_U1LbPt9vpwDRV3
+SF:MFhZTazypPj0T9kv_WzyjU4;\x20expires=Thu,\x2008-Sep-2022\x2006:28:27\x20
+SF:GMT;\x20path=/;\x20domain=\.google\.com;\x20HttpOnly\r\nAlt-Svc:\x20h3=
+SF:\":443\";\x20ma=2592000,h3-29=\":443\";\x20ma=2592000,h3-Q050=\":443\";
+SF:\x20ma=2592000,h3-Q046=\":443\";\x20ma=2592000,h3-Q043=\":443\";\x20ma=
+SF:2592000,quic=\":443\";\x20ma=2592000;\x20v=\"46,43\"\r\nAccept-Ranges:\
+SF:x20none\r\nVary:\x20Accept-Encoding\r\n\r\n<!doctype\x20html><html\x20i
+SF:t")%r(HTTPOptions,7BC,"HTTP/1\.0\x20405\x20Method\x20Not\x20Allowed\r\n
+SF:Allow:\x20GET,\x20HEAD\r\nDate:\x20Wed,\x2009\x20Mar\x202022\x2006:28:2
+SF:9\x20GMT\r\nContent-Type:\x20text/html;\x20charset=UTF-8\r\nServer:\x20
+SF:gws\r\nContent-Length:\x201592\r\nX-XSS-Protection:\x200\r\nX-Frame-Opt
+SF:ions:\x20SAMEORIGIN\r\nAlt-Svc:\x20h3=\":443\";\x20ma=2592000,h3-29=\":
+SF:443\";\x20ma=2592000,h3-Q050=\":443\";\x20ma=2592000,h3-Q046=\":443\";\
+SF:x20ma=2592000,h3-Q043=\":443\";\x20ma=2592000,quic=\":443\";\x20ma=2592
+SF:000;\x20v=\"46,43\"\r\n\r\n<!DOCTYPE\x20html>\n<html\x20lang=en>\n\x20\
+SF:x20<meta\x20charset=utf-8>\n\x20\x20<meta\x20name=viewport\x20content=\
+SF:"initial-scale=1,\x20minimum-scale=1,\x20width=device-width\">\n\x20\x2
+SF:0<title>Error\x20405\x20\(Method\x20Not\x20Allowed\)!!1</title>\n\x20\x
+SF:20<style>\n\x20\x20\x20\x20\*{margin:0;padding:0}html,code{font:15px/22
+SF:px\x20arial,sans-serif}html{background:#fff;color:#222;padding:15px}bod
+SF:y{margin:7%\x20auto\x200;max-width:390px;min-height:180px;padding:30px\
+SF:x200\x2015px}\*\x20>\x20body{background:url\(//www\.google\.com/images/
+SF:errors/robot\.png\)\x20100%\x205px\x20no-repeat;padding-right:205px}p{m
+SF:argin:11px\x200\x2022p");
+OS fingerprint not ideal because: Didn't receive UDP response. Please try again with -sSU
+No OS matches for host
+Network Distance: 3 hops
+
+TRACEROUTE (using port 139/tcp)
+HOP RTT      ADDRESS
+1   2.28 ms  192.168.254.140
+2   ...
+3   27.10 ms bom07s18-in-f14.1e100.net (172.217.166.46)
+
+OS and Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+Nmap done: 1 IP address (1 host up) scanned in 207.44 seconds
+Starting Nmap 7.92 ( https://nmap.org ) at 2022-03-09 21:30 IST
